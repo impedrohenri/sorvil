@@ -4,6 +4,15 @@ body {
     margin: 0px;
     background-color: rgb(245, 245, 220);
     font-family: 'Roboto';
-    
-    
+    --dark_main_color: rgb(2, 83, 115);
+    --light_main_color: rgb(61, 173, 217);
+    --semi_black_color: rgb(255, 110, 0);
+    --darkest-color: rgb(167, 74, 0);
+    --light_color: rgb(245, 245, 220);
+
 }
+
+/* body:has(.logout_div:hover){
+    --dark_main_color: rgb(50, 50, 50);
+    --light_main_color: rgb(100, 100, 100);
+} */
