@@ -1,0 +1,169 @@
+html{
+    max-width: 100vw;
+    min-height: 100vh;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/index_bg.jpg);
+}
+
+.outer_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color:  rgb(2, 83, 115, 0.4);
+    
+}
+
+.main_box{
+    display: flex;
+    margin: auto;
+
+    min-width: fit-content;
+    min-height: fit-content;
+    max-width: 100%;
+    border-radius: 3px;
+    background-color: rgba(245, 245, 220, 0.97);
+    box-shadow: 15px 15px 35px 0px #000000;
+    margin: 5vh auto 5vh;
+}
+
+
+.sign_up_form{
+    text-align: center;
+    /* border: 1px solid red; */
+    width: fit-content;
+    color: var(--semi_black_color);
+}
+
+form{
+    display: flex;
+    max-width: 380px;
+    min-height: fit-content;
+    align-items: center;
+    /* border: 1px solid red; */
+    flex-wrap: wrap;
+    background-color: rgb(245, 245, 245);
+    margin: 30px;
+    border: 8px solid rgb(255, 255, 255);
+    border-radius: 12px;
+    color: rgb(0, 0, 0);
+}
+
+form > div{
+    display: flex;
+    width: 100%;
+    
+    /* border: 1px solid blue; */
+    .label_text, span{
+        margin-left: 20px;
+        font-size: 18px;
+        background-color: rgba(158, 158, 158, 0);
+    }
+    textarea{
+        
+        min-width: 88%;
+        max-width: 88%;
+        min-height: 70px;
+        max-height: 70px;
+
+        padding: 5px 10px;
+        margin: 5px auto 10px;
+        border: 1px solid rgba(153, 153, 153, 0.3);
+        border-radius: 8px;
+        font-size: 14px;
+    }
+    textarea:focus-within{
+        outline: 2px solid var(--semi_black_color);
+    }
+    
+}
+.sexo_div{display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    gap: 15px;
+
+    input{
+        margin-top: -1px;
+        margin-right: -12px;
+    }
+}
+
+
+.input_text{
+    font-size: 16px;
+    width: 88%;
+    margin: 4px;
+    margin-bottom: 10px;
+    margin-inline: auto;
+    padding: 14px 10px;
+    border: 1px solid rgba(153, 153, 153, 0.3);
+    border-radius: 8px;
+}
+.input_text:focus-within{
+    outline: 2px solid var(--semi_black_color);
+}
+
+.button_default{
+    display: block;
+    margin: 20px;
+    margin-inline: auto;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 0px;
+    cursor: pointer;
+    background-color: var(--dark_main_color);
+    color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 3px -1px #222222;
+    transition: 0.2s ;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.terms_conditions{
+    /* border: 1px solid blue; */
+    text-align: justify;
+    font-size: 11px;
+    margin-inline: auto;
+    width: 90%;
+    padding-right: 10px;
+
+    input{
+        margin-right: 15px;
+    }
+
+    a{
+        text-decoration: none;
+        color: var(--dark_main_color);
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+
+.button_cadastrar{
+    padding-inline: 60px;
+    
+}
+.button_cadastrar:hover{
+    background-color: var(--light_main_color);
+    
+    transform: scale(1.03);
+
+}
+.button_cadastrar:active{
+    background-color: rgb(255, 255, 255);
+    color: var(--dark_main_color);
+    box-shadow: inset 1px 1px 2px #000000;
+    transform: translateY(2px);
+}

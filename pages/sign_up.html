@@ -3,9 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/default.css">
+    <link rel="stylesheet" href="../styles/sign_up.css">
     <title>Cadastre-se</title>
 </head>
 <body>
-    
+    <div class="outer_box">
+        <div class="main_box">
+            <div class="sign_up_form">
+
+                <h1>Cadastre-se</h1>
+
+                <form action="" style="padding: 10px">
+
+                    <div><label class="label_text" for="name-id">Nome:</label></div>
+                    <div>
+                    <input class="input_text" id="name-id" type="text" placeholder="Digite seu nome">
+                    </div>
+
+                    <div class="sexo_div">
+                    <span>Sexo:</span>
+                    <input type="radio" name="sexo" id="feminino">
+                    <label for="feminino">Feminino</label>
+                    <input type="radio" name="sexo" id="masculino">
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" name="sexo" id="outro">
+                    <label for="outro">Outro</label>
+                    </div>
+
+                    <hr style="width: 80%; margin-bottom: 15px; border-color: rgb(228, 228, 228); border-top: none; border-left: none;">
+
+                    <div><label class="label_text" for="observacoes-id">Observações: </label></div>
+                    <div>
+                    <textarea name="" id="" style="width: 70%;"  ></textarea>
+                    </div>
+
+                    <div><label class="label_text" for="email-id">E-mail:</label></div>
+                    <div>
+                    <input class="input_text" type="email" name="" id="email-id" placeholder="Digite seu e-mail">
+                    </div>
+
+                    <div><label class="label_text" for="senha-id">Senha:</label></div>
+                    <div>
+                    <input class="input_text" type="password" name="" id="senha-id" placeholder="Crie uma senha">
+                    </div>
+
+                    <div><label class="label_text" for="confsenha-id">Confirmar Senha:</label></div>
+                    <div>
+                    <input class="input_text" type="password" name="" id="confsenha-id" placeholder="Confirme sua senha">
+                    </div>
+
+                    <div class="terms_conditions">
+                        <input class="checkbox" type="checkbox" name="" id="">
+                        <p>Ao continuar, você concorda com as
+                            <a href="">Condições de Uso</a> da Sorvil. Por favor verifique a
+                            <a href="">Notificação de Privacidade</a>,
+                            <a href="">Notificação de Cookies</a> e a
+                            <a href="">Notificação de Anúncios Baseados em Interesse</a>.
+                        </p>
+                    </div>
+
+                    <div>
+                        <a href="../index.html" style="margin-inline: auto; text-decoration: none;">
+                            <input class="button_default button_cadastrar" type="button" value="Cadastrar">
+                         </a>
+                    </div>
+
+                </form>
+            </div>
+            
+        </div>
+    </div>
 </body>
 </html>

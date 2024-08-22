@@ -73,40 +73,23 @@ h1{
 
 /* SIDE B */
 
-.login-form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+
+.form_div_a{
     margin: 20px;
     width: 400px;
     height: 410px;
-    
+    border: 8px solid rgb(255, 255, 255);
     border-radius: 12px;
-    box-shadow: 1px 1px 8px rgba(0, 90, 0, 0.1);
-    background-color: rgb(255, 255, 255);
-}
-
-.form_div_a{
-    width: 98%;
-    height: 98%;
-    border-radius: 8px;
     background-color: rgb(245, 245, 245);
 }
 
-.label_email{
+.label_email, .label_senha{
     font-size: 18px;
     padding-left: 15px;
     padding-top: 10px;
     background-color: rgba(158, 158, 158, 0);
 }
 
-.label_senha{
-    font-size: 18px;
-    padding-left: 15px;
-    padding-top: 10px;
-    background-color: rgba(158, 158, 158, 0);
-}
 
 .input_email, .input_senha{
     display: block;
