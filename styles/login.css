@@ -73,11 +73,14 @@ h1{
 
 /* SIDE B */
 
-
-.form_div_a{
+.login-form{
     margin: 20px;
     width: 400px;
-    height: 410px;
+    border-radius: 12px;
+} 
+
+.form_div_a{
+
     border: 8px solid rgb(255, 255, 255);
     border-radius: 12px;
     background-color: rgb(245, 245, 245);
