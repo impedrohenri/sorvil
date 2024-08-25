@@ -1,8 +1,9 @@
-html{
+html {
     max-width: 100vw;
     min-height: 100vh;
 }
-body{
+
+body {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,16 +12,16 @@ body{
     background-image: url(../images/index_bg.jpg);
 }
 
-.outer_box{
+.outer_box {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    background-color:  rgb(2, 83, 115, 0.4);
+    background-color: rgb(2, 83, 115, 0.4);
 }
 
-.main_box{
+.main_box {
     margin: auto;
     min-width: fit-content;
     min-height: fit-content;
@@ -32,92 +33,81 @@ body{
 }
 
 
-.sign_up_form{
+.sign_up_form {
     text-align: center;
     width: fit-content;
     color: var(--semi_black_color);
     margin: 20px;
     max-width: 95%;
     border-radius: 12px;
-    
-    h1{
+    h1 {
         font-size: 35px;
+        
+        width: fit-content;
+        margin-inline: auto;
     }
 }
+
+img {
+    width: 300px;
+    
+
+}
+
 .form_div{
     border: 8px solid rgb(255, 255, 255);
     border-radius: 12px;
     background-color: rgb(245, 245, 245);
+    
 }
 
 form{
     display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 380px;
     min-height: fit-content;
-    align-items: center;
-    padding: 10px;
+    margin-inline: auto;
     flex-wrap: wrap;
     border-radius: 12px;
     color: rgb(0, 0, 0);
+    padding: 10px;
+    
 }
 
-form > div{
-    display: flex;
-    width: 100%;
+.form_text{
+    color: var(--dark_main_color);
+    margin-inline: auto;
+    max-width: 86%;
+    text-align: left;
+    word-wrap: break-word;
+}
 
-    .label_text, span{
+.email_div{
+    
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    label {
         margin-left: 20px;
-        font-size: 18px;
-        background-color: rgba(158, 158, 158, 0);
+        font-weight: bold;
     }
-    textarea{
-        min-width: 88%;
-        max-width: 88%;
-        min-height: 70px;
-        max-height: 70px;
-        padding: 5px 10px;
-        margin: 5px auto 10px;
+
+    .input_email{
+        font-size: 16px;
+        width: 88%;
+        margin: 4px;
+        margin-bottom: 10px;
+        margin-inline: auto;
+        padding: 14px 10px;
         border: 1px solid rgba(153, 153, 153, 0.3);
         border-radius: 8px;
-        font-size: 14px;
     }
-    textarea:focus-within{
-        outline: 2px solid var(--semi_black_color);
-    }
-    
-}
-.sexo_div{
-    display: block;
-    flex-wrap: wrap;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    gap: 15px;
-    text-align: left;
-
-    div{
-        margin-top: 5px;
-        margin-left: 20px;
-        
-    }
-    .escolhas{
-        display: flex;
-    }
-    
 }
 
-
-.input_text{
-    font-size: 16px;
-    width: 88%;
-    margin: 4px;
-    margin-bottom: 10px;
-    margin-inline: auto;
-    padding: 14px 10px;
-    border: 1px solid rgba(153, 153, 153, 0.3);
-    border-radius: 8px;
-}
-.input_text:focus-within{
+.input_email:focus-within{
     outline: 2px solid var(--semi_black_color);
+    
 }
 
 .button_default{
@@ -137,47 +127,14 @@ form > div{
     text-decoration: none;
     text-align: center;
 }
-
-.terms_conditions{
-    text-align: justify;
-    text-wrap: wrap;
-    align-items: start;
-    font-size: 11px;
-    margin-inline: auto;
-    width: 90%;
-    padding-right: 10px;
-
-    input{
-        margin-top: 15px;
-        margin-right: 15px;
-        accent-color: rgb(255, 95, 0);
-    }
-
-    a{
-        text-decoration: none;
-        color: var(--dark_main_color);
-    }
-    a:hover{
-        text-decoration: underline;
-    }
-}
-
-
-.link_button{
-    margin-inline: auto; 
-    text-decoration: none;
-}
-.button_cadastrar{
+.button_continuar{
     padding-inline: 60px;
-    
 }
-.button_cadastrar:hover{
+.button_continuar:hover{
     background-color: var(--light_main_color);
-    
     transform: scale(1.03);
-
 }
-.button_cadastrar:active{
+.button_continuar:active{
     background-color: rgb(255, 255, 255);
     color: var(--dark_main_color);
     box-shadow: inset 1px 1px 2px #000000;
