@@ -19,57 +19,70 @@
                 <div class="form_div">
                     <form action="">
 
-                        <div><label class="label_text" for="name-id">Nome:</label></div>
+                        <!-- Nome -->
+                        <div><label class="label_text" for="nome_id">Nome:</label></div>
                         <div>
-                            <input class="input_text" id="name-id" type="text" placeholder="Digite seu nome">
+                            <input class="input_text" id="nome_id" type="text" placeholder="Digite seu nome" oninput="limpar(nome_id, msgNome)">
                         </div>
+                        <span class="msgValidar" id="msgNome"></span>
 
+                        <!-- Sexo -->
                         <div class="sexo_div">
                             <span>Sexo:</span>
                             <div class="escolhas">
                                 <div>
-                                    <input type="radio" name="sexo" id="feminino">
+                                    <input type="radio" name="sexo" id="feminino" onclick="limparRadio(msgSexo)">
                                     <label for="feminino">Feminino</label>
                                 </div>
                                 <div>
-                                    <input type="radio" name="sexo" id="masculino">
+                                    <input type="radio" name="sexo" id="masculino" onclick="limparRadio(msgSexo)">
                                     <label for="masculino">Masculino</label>
                                 </div>
                                 <div>
-                                    <input type="radio" name="sexo" id="outro">
+                                    <input type="radio" name="sexo" id="outro" onclick="limparRadio(msgSexo)">
                                     <label for="outro">Outro</label>
                                 </div>
                             </div>
                         </div>
+                        <span class="msgValidar" id="msgSexo"></span>
 
                         <hr
                             style="width: 80%; margin-bottom: 15px; border-color: rgb(228, 228, 228); border-top: none; border-left: none;">
 
+                        <!-- Observações -->
                         <div><label class="label_text" for="observacoes-id">Observações: </label></div>
                         <div>
-                            <textarea name="" id="" style="width: 70%;"></textarea>
+                            <textarea name="" id="" style="width: 70%;" placeholder="(Opcional)"></textarea>
                         </div>
 
-                        <div><label class="label_text" for="email-id">E-mail:</label></div>
+                        <!-- E-mail -->
+                        <div><label class="label_text" for="email_id">E-mail:</label></div>
                         <div>
-                            <input class="input_text" type="email" name="" id="email-id"
-                                placeholder="Digite seu e-mail">
+                            <input class="input_text" type="email" name="" id="email_id" placeholder="Digite seu e-mail" oninput="limpar(email_id, msgEmail)">
                         </div>
+                        <span class="msgValidar" id="msgEmail"></span>
 
-                        <div><label class="label_text" for="senha-id">Senha:</label></div>
+                        <!-- Senha -->
+                        <div><label class="label_text" for="senha_id">Senha:</label></div>
                         <div>
-                            <input class="input_text" type="password" name="" id="senha-id"
-                                placeholder="Crie uma senha">
+                            <input class="input_text" type="password" name="" id="senha_id"
+                                placeholder="Crie uma senha" oninput="limpar(senha_id, msgSenha)">
                         </div>
+                        <span class="msgValidar" id="msgSenha"></span>
 
-                        <div><label class="label_text" for="confsenha-id">Confirmar Senha:</label></div>
+                        <!-- Confirmar senha -->
+                        <div><label class="label_text" for="confsenha_id">Confirmar Senha:</label></div>
                         <div>
-                            <input class="input_text" type="password" name="" id="confsenha-id"
-                                placeholder="Confirme sua senha">
+                            <input class="input_text" type="password" name="" id="confsenha_id" placeholder="Confirme sua senha" oninput="limpar(confsenha_id, msgConfSenha)">
                         </div>
+                        <span class="msgValidar" id="msgConfSenha"></span>
 
+
+                        
+
+                        <!-- Termos e condições -->
                         <div class="terms_conditions">
-                            <input class="checkbox" type="checkbox" name="" id="">
+                            <input class="checkbox" type="checkbox" name="" id="termos_condicoes" onclick="limpar(termos_condicoes, msgTermosConds)">
                             <p>Ao continuar, você concorda com as
                                 <a href="">Condições de Uso</a> da Sorvil. Por favor verifique a
                                 <a href="">Notificação de Privacidade</a>,
@@ -78,10 +91,10 @@
                             </p>
                         </div>
 
+                        <span class="msgValidar" id="msgTermosConds"></span>
+
                         <div>
-                            <a href="../index.html" class="link_button">
-                                <input class="button_default button_cadastrar" type="button" value="Cadastrar">
-                            </a>
+                                <button class="button_default button_cadastrar" type="button" onclick="validar()">Cadastrar</button>
                         </div>
 
                     </form>
@@ -90,6 +103,98 @@
 
         </div>
     </div>
+
+    <script>
+        var nome = document.getElementById('nome_id');
+        var email = document.getElementById('email_id');
+        var senha = document.getElementById('senha_id');
+        var confSenha = document.getElementById('confsenha_id');
+        var termosCond = document.getElementById('termos_condicoes');
+
+        var msgNome = document.getElementById('msgNome');
+        var msgEmail = document.getElementById('msgEmail');
+        var msgConfSenha = document.getElementById('msgConfSenha');
+        var msgSexo = document.getElementById('msgSexo');
+        var msgTermos = document.getElementById('msgTermosConds')
+
+        var emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+
+        function validar(){
+
+            //Valida o Nome
+            if (nome.value == ""){
+                msgNome.textContent = 'Digite seu nome';
+                nome.style.outline = '2px solid #FF0000';
+                nome.focus()
+                return false;
+            }
+
+            // Valida sexo
+            
+            if(document.getElementById('feminino').checked) {
+  
+            }else if(document.getElementById('masculino').checked) {
+  
+            }else if(document.getElementById('masculino').checked){
+
+            }else {
+                msgSexo.textContent = "Selecione ao menos um";
+                sexo.focus();
+                return false;
+            }
+            
+
+            // Valida o email
+            if (email.value == ""){
+                msgEmail.textContent = "Digite seu email";
+                email.style.outline = '2px solid #FF0000';
+                email.focus()
+                return false;
+            } 
+            else if(!emailRegex.test(email.value)) {
+                msgEmail.textContent = "Endereço de e-mail errado ou inválido. Corrija e tente novamente.";
+                email.style.outline = '2px solid #FF0000';
+                email.focus()
+                return false;
+            }
+            
+            // Valida a senha
+            if ((senha.value == '') || (senha.value.length < 8)){
+                msgSenha.textContent = "Mínimo de 8 caracteres necessários";
+                senha.style.outline = '2px solid #FF0000';
+                senha.focus()
+                return false;
+            }
+            // Confirmação de senha
+            else if (senha.value != confSenha.value){
+                msgConfSenha.textContent = 'As senhas não são iguais';
+                confSenha.style.outline = '2px solid #FF0000';
+                confSenha.focus();
+                return false;
+            }
+
+            if (!termosCond.checked){
+                msgTermos.textContent = 'É necessário aceitar os termos e condições de uso';
+                termosCond.style.outline = '1px solid red';
+                termosCond.focus();
+                return false
+            }
+
+            window.location.href = '../index.html'
+            
+        }
+        
+        // Limpa as mensagens de erro
+            function limpar(id, msg){
+                id.style.outline = ''
+                msg.textContent = ''
+            }
+            function limparRadio(mensagem){
+                mensagem.textContent = ''
+            }
+            
+    </script>
 </body>
 
 </html>

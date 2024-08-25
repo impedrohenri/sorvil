@@ -12,67 +12,98 @@
 </head>
 
 <body class="page-default">
-
     <div class="outer_box">
-    <div class="main_box">
-        <div class="login-form1 ">
-            <div class="logo1"><img src="images/sorvil_cut_2.png" alt="" style="width: 100%;"></div>
+        <div class="main_box">
+            <div class="login-form1 ">
+                <div class="logo1"><img src="images/sorvil_cut_2.png" alt="" style="width: 100%;"></div>
 
-            <h1>Faça <strong>Login</strong> <br> ou <strong>Cadastre-se</strong></h1>
+                <h1>Faça <strong>Login</strong> <br> ou <strong>Cadastre-se</strong></h1>
 
-            <div class="terms_conditions">
-                <p>Ao continuar, você concorda com as
-                    <a href="">Condições de Uso</a> da Sorvil. Por favor verifique a
-                    <a href="">Notificação de Privacidade</a>,
-                    <a href="">Notificação de Cookies</a> e a
-                    <a href="">Notificação de Anúncios Baseados em Interesse</a>.
-                </p>
-            </div>
-
-        </div>
-
-
-
-
-        <div class="login-form">
-
-
-            <div class="form_div_a">
-                <form action="">
-                    <div>
-                        <div class="label_email"><label for="email">E-mail</label></div>
-                        <input class="input_email" type="text" id="email" placeholder="Digite seu email">
-
-
-                        <div class="label_senha"><label for="password">Senha</label></div>
-                        
-                        <input class="input_senha" type="password" id="password" placeholder="Digite sua senha">
-                        
-                        <hr class="line">
-
-
-                        
-
-                        <a href="pages/main_page.html"><input class="button_default login_button" type="button" value="Entrar"></a>
-
-                    </div>
-                </form>
-
-                <div class="pass_recover">
-                    <p><a href="/pages/recuperar_senha.html">Esqueceu a senha?</a></p>
+                <div class="terms_conditions">
+                    <p>Ao continuar, você concorda com as
+                        <a href="">Condições de Uso</a> da Sorvil. Por favor verifique a
+                        <a href="">Notificação de Privacidade</a>,
+                        <a href="">Notificação de Cookies</a> e a
+                        <a href="">Notificação de Anúncios Baseados em Interesse</a>.
+                    </p>
                 </div>
-
-                <hr class="line">
-
-                <div><a href="pages/sign_up.html" class="button_default register_button">Cadastre-se</a></div>
             </div>
 
+            <div class="login-form">
+                <div class="form_div_a">
+                    <form action="">
+                        <div>
+                            <div class="label_email"><label for="email">E-mail</label></div>
+                            <input class="input_email" type="text" id="email" placeholder="Digite seu email" oninput="limpar(email, msgEmail)">
+                            <span id="mensagemEmail"></span>
 
 
+                            <div class="label_senha"><label for="password">Senha</label></div>
+                            <input class="input_senha" type="password" id="password" placeholder="Digite sua senha" oninput="limpar(senha, msgSenha)">
+                            <span id="mensagemSenha"></span>
 
+                            <hr class="line">
+
+                            <!-- <a href="pages/main_page.html">--><button type="button" onclick="validar()" class="button_default login_button">Entrar</button> <!--</a> -->
+
+                        </div>
+                    </form>
+
+                    <div class="pass_recover">
+                        <p><a href="pages/recuperar_senha.html">Esqueceu a senha?</a></p>
+                    </div>
+
+                    <hr class="line">
+
+                    <div><a href="pages/sign_up.html" class="button_default register_button">Cadastre-se</a></div>
+                </div>
+            </div>
         </div>
     </div>
-    </div> 
+
+    <script>
+    
+            var email = document.getElementById("email");
+            var senha = document.getElementById("password");
+
+            var msgEmail = document.getElementById("mensagemEmail");
+            var msgSenha = document.getElementById("mensagemSenha");
+
+            var emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+        function validar(){
+    
+            // Valida o email
+            if (email.value == ""){
+                msgEmail.textContent = "Digite seu email";
+                email.style.outline = '2px solid #FF0000';
+                email.focus()
+                return false;
+            } 
+            else if(!emailRegex.test(email.value)) {
+                msgEmail.textContent = "Endereço de e-mail errado ou inválido. Corrija e tente novamente.";
+                email.style.outline = '2px solid #FF0000';
+                email.focus()
+                return false;
+            }
+            
+            // Valida a senha
+            if (senha.value == ''){
+                msgSenha.textContent = "Insira sua senha";
+                senha.style.outline = '2px solid #FF0000';
+                senha.focus()
+                return false;
+            }
+
+            window.location.href = 'pages/main_page.html'
+        }
+
+        // Limpa as mensagens de erro
+        function limpar(id, msg){
+            id.style.outline = ''
+            msg.textContent = ''
+        }
+    </script>
 </body>
 
 </html>
