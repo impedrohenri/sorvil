@@ -9,7 +9,14 @@
 
     <title>Recuperar Senha</title>
 </head>
-<body>
+<body>       
+    <header class="blur">
+        <a href="../index.html"><div class="button_voltar"><img src="../images/arrow_back.png" alt=""></div></a>
+
+        <img class="logo" src="../images/sorvil.png" alt="">
+        <div class="button_prosseguir"></div>
+    </header>
+
     <div class="outer_box">
         <div class="main_box">
 
@@ -34,12 +41,22 @@
 
         </div>
     </div>
+
+    <!-- popover exibido temporariamente -->
+    <div popover id="mensagemEnviada">As instruções para recuperação da conta foram enviadas ao e-mail. <br><br><br>
+    Você será redirecionado para a página de login <br>em alguns segundos.</div>
     
     <script>
         var email = document.getElementById('email_ID')
         var emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
         var msgEmail = document.getElementById('msgEmail')
+        var msgEnviada = document.getElementById('mensagemEnviada')
+
+        // chamada pela função validar() para voltar para a página de login
+        function voltarLogin(){
+            window.location.href = '../index.html'
+        }
 
         function validar(){
 
@@ -56,7 +73,8 @@
               return false
             }
 
-            window.location.href = '../index.html'
+            setTimeout(voltarLogin, 7000);
+            msgEnviada.showPopover('mensagemEnviada');
         }
 
         function limpar(id, msg){
