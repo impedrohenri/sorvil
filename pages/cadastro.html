@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="../images/android-chrome-512x512.png">
     <link rel="stylesheet" href="../styles/default.css">
-    <link rel="stylesheet" href="../styles/sign_up.css">
+    <link rel="stylesheet" href="../styles/cadastro.css">
     <title>Cadastre-se</title>
 </head>
 
@@ -26,7 +26,7 @@
             <div class="sign_up_form">
                 <h1>Criar conta</h1>
                 <div class="form_div">
-                    <form action="">
+                    <form action="" id="form_id">
 
                         <!-- Nome -->
                         <div><label class="label_text" for="nome_id">Nome:</label></div>
@@ -103,6 +103,7 @@
                         <span class="msgValidar" id="msgTermosConds"></span>
 
                         <div>
+                                <input type="reset" value="Limpar Formulário" class="button_default button_limpar">
                                 <button class="button_default button_cadastrar" type="button" onclick="validar()">Cadastrar</button>
                         </div>
 

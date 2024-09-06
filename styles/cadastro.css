@@ -210,8 +210,30 @@ form > div{
     margin-inline: auto; 
     text-decoration: none;
 }
+
+/* BOTÃO DE LIMPAR FORMULÁRIO */
+.button_limpar{
+    background-color: var(--darkest_color);
+    font-size: 12px;
+    padding: 5px;
+    padding-inline: 9px;
+    text-wrap: wrap;
+    width: min-content;
+}
+.button_limpar:hover{
+    background-color: var(--semi_black_color);
+    transform: scale(1.03);
+}
+.button_limpar:active{
+    background-color: rgb(255, 255, 255);
+    color: var(--semi_black_color);
+    box-shadow: inset 1px 1px 2px #000000;
+    transform: translateY(2px);
+}
+
+/* BOTÃO DE CADASTRAR */
 .button_cadastrar{
-    padding-inline: 60px;
+    padding-inline: 50px;
     
 }
 .button_cadastrar:hover{

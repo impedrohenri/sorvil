@@ -1,10 +1,6 @@
-
-body{
-    height: 2000px;
-}
-
 .header{
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 100%;
 }
 .upper_navbar{
@@ -115,7 +111,9 @@ body{
     height: 37px;
 }
 
-
+.profile_and_cart{
+    display: flex;
+}
 .profile_div{
     display: flex;
     margin-right: 2px;
@@ -462,17 +460,3 @@ body{
         width: 58%;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

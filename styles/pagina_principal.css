@@ -1,0 +1,60 @@
+
+body{
+    height: 2000px;
+}
+
+main{
+    margin-top: 20px;
+    width: 100%;
+    .div_produtos{padding-inline: 30px;}
+}
+
+.produto{
+    
+    display: flex;
+    flex-direction: column;
+    width: 15%;
+    height: 50vh;
+    padding: 10px;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    transition: 450ms;
+}
+.produto:hover{
+    transform: scale(1.03);
+    box-shadow: 2px 2px 5px -4px rgb(143, 143, 143);
+}
+.img_produto{
+    height: 40%;
+    margin: 10px;
+    margin-inline: auto;
+    img{
+        height: 100%;
+    }
+}
+
+.resumo_produto{
+    /* border: 1px solid green; */
+    width: 100%;
+    font-size: 14px;
+
+    .titulo_produto{
+        color: var(--dark_main_color);
+    font-weight: 600;
+    font-size: 17px;
+    }
+    .preco_produto{
+        font-size: 22px;
+        font-weight: 600;
+        margin-top: 10px;
+    }
+}
+
+
+
+
+
+
+
+
+

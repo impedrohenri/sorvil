@@ -167,7 +167,7 @@ h1{
 }
 
 .register_button{
-    background-color: var(--darkest-color);
+    background-color: var(--darkest_color);
     width: 40%;
     padding: 10px 0px;
 }
