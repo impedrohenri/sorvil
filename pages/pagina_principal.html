@@ -7,8 +7,9 @@
     <title>Página Principal</title>
     <link rel="icon" type="image/x-icon" href="../images/android-chrome-512x512.png">
     <link rel="stylesheet" href="../styles/default.css">
-    <link rel="stylesheet" href="../styles/pagina_principal.css">
     <link rel="stylesheet" href="../styles/cabecalho.css">
+    <link rel="stylesheet" href="../styles/pagina_principal.css">
+
 </head>
 
 <body>
@@ -43,7 +44,7 @@
                 </a>
 
                 <!-- CARRINHO -->
-                <a href="" class="cart_div">
+                <a href="carrinho.html" class="cart_div">
                     <div class="cart_content">
                         <img class="cart_img" src="../images/shopping_cart.svg" alt="">
                         <p class="cart_num">1</p>
@@ -81,21 +82,21 @@
                     <nav class="menu_nav">
                         <div class="menu_conta"><img src="../images/profile_pic.svg" alt="">Sua Conta</div>
                         <div class="menu_topicos">Destaques</div>
-                            <div class="menu_destaques">Promoções</div>
-                            <div class="menu_destaques">Mais Vendidos</div>
-                            <div class="menu_destaques">Em Alta</div>
+                        <div class="menu_destaques">Promoções</div>
+                        <div class="menu_destaques">Mais Vendidos</div>
+                        <div class="menu_destaques">Em Alta</div>
                         <div class="menu_topicos">Categorias</div>
-                            <div class="menu_categorias">Ficção Científica</div>
-                            <div class="menu_categorias">Didáticos</div>
-                            <div class="menu_categorias">Religiosos</div>
-                            <div class="menu_categorias">True Crime</div>
-                            <div class="menu_categorias">Autoajuda</div>
-                            <div class="menu_categorias">Romances</div>
-                            <div class="menu_categorias">Suspense</div>
+                        <div class="menu_categorias">Ficção Científica</div>
+                        <div class="menu_categorias">Didáticos</div>
+                        <div class="menu_categorias">Religiosos</div>
+                        <div class="menu_categorias">True Crime</div>
+                        <div class="menu_categorias">Autoajuda</div>
+                        <div class="menu_categorias">Romances</div>
+                        <div class="menu_categorias">Suspense</div>
                         <div class="menu_topicos">Outros</div>
-                            <div class="menu_categorias">Autores em alta</div>
-                            <div class="menu_categorias">Pré-venda</div>
-                            <div class="menu_categorias">Lançados Recentemente</div>
+                        <div class="menu_categorias">Autores em alta</div>
+                        <div class="menu_categorias">Pré-venda</div>
+                        <div class="menu_categorias">Lançados Recentemente</div>
                     </nav>
 
                     <label for="menu_checkbox" class="bg_opaco">
@@ -137,19 +138,311 @@
 
     <main>
         <div class="div_produtos">
-            <div class="produto">
-                <div class="img_produto">
-                    <img src="../images/harrypottermin/harry-potter-pedra-filosofal-corvinal.jpg" alt="">
-                </div>
 
-                <div class="resumo_produto">
-                <div class="titulo_produto">Harry Potter e a Pedra Filosofal</div>
-                <span>Escrito por J. K. Rowling <br>Capa Comum</span>
-                <div class="preco_produto">R$ 24,90</div>
+            <!-- Harry Potter -->
+            <div class="produto">
+                    <a href="detalhes/hppedrafilosofal.html" class="img_produto">
+                        <img src="../images/livros/harrypottermin/harry-potter-pedra-filosofal-corvinal.jpg" alt="">
+                    </a>
+                    <a href="detalhes/hppedrafilosofal.html" class="titulo_produto">Harry Potter e a Pedra Filosofal</a>
+
+                    <div class="resumo_produto">
+                        <span>Escrito por J. K. Rowling <br>Capa Dura</span>
+                        <div class="preco_produto">R$ 24,90</div>
+                    </div>
+                
+                <div class="compra_carrinho">
+                    <a href="detalhes/hppedrafilosofal.html">
+                    <button class="button_default button_comprar">Comprar</button>
+                    </a>
+                    <button class="button_default button_add" popovertarget="adiciona_carrinho">
+                        <img src="../images/shopping_cart.svg" alt="">
+                    </button>
                 </div>
             </div>
 
+            <!-- Alice -->
+
+            <div class="produto">
+                <a href="detalhes/alicenopaisdasmaravilhas.html" class="img_produto">
+                    <img src="../images/livros/alicemin/alice-no-pais-das-maravilhas.png" alt="">
+                </a>
+                <a href="detalhes/alicenopaisdasmaravilhas.html" class="titulo_produto">Alice no País das Maravilhas</a>
+
+                <div class="resumo_produto">
+                    <span>Escrito por Lewis Carroll <br>Capa Comum</span>
+                    <div class="preco_produto">R$ 27,90</div>
+                </div>
+            
+            <div class="compra_carrinho">
+                <a href="detalhes/alicenopaisdasmaravilhas.html">
+                <button class="button_default button_comprar">Comprar</button>
+                </a>
+                <button class="button_default button_add" popovertarget="adiciona_carrinho">
+                    <img src="../images/shopping_cart.svg" alt="">
+                </button>
+            </div>
         </div>
+
+        <!-- Orgulho e Preconceito -->
+
+        <div class="produto">
+            <a href="detalhes/orgulhoeprconceito.html" class="img_produto">
+                <img src="../images/livros/orgulhomin/orgulho-e-preconceito.png" alt="">
+            </a>
+            <a href="detalhes/orgulhoeprconceito.html" class="titulo_produto">orgulho e Preconceito</a>
+
+            <div class="resumo_produto">
+                <span>Escrito por Jane Austen <br>Capa Dura</span>
+                <div class="preco_produto">R$ 33,90</div>
+            </div>
+        
+            <div class="compra_carrinho">
+                <a href="detalhes/orgulhoeprconceito.html">
+                <button class="button_default button_comprar">Comprar</button>
+                </a>
+                <button class="button_default button_add" popovertarget="adiciona_carrinho">
+                    <img src="../images/shopping_cart.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+        <!-- Trono de Vidro -->
+
+        <div class="produto">
+            <a href="detalhes/tronodevidro.html" class="img_produto">
+                <img src="../images/livros/boxtronomin/box-trono-de-vidro.png" alt="">
+            </a>
+            <a href="detalhes/tronodevidro.html" class="titulo_produto">Box Trono de Vidro</a>
+
+            <div class="resumo_produto">
+                <span>Escrito por Sarah J. Maas <br>Capa Comum</span>
+                <div class="preco_produto">R$ 184,90</div>
+            </div>
+        
+            <div class="compra_carrinho">
+                <a href="detalhes/tronodevidro.html">
+                <button class="button_default button_comprar">Comprar</button>
+                </a>
+                <button class="button_default button_add" popovertarget="adiciona_carrinho">
+                    <img src="../images/shopping_cart.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Declínio de um Homem -->
+
+        <div class="produto">
+            <a href="detalhes/decliniodeumhomem.html" class="img_produto">
+                <img src="../images/livros/decliniomin/declinio-de-um-homem.jpg" alt="">
+            </a>
+            <a href="detalhes/decliniodeumhomem.html" class="titulo_produto">Declínio de um Homem</a>
+
+            <div class="resumo_produto">
+                <span>Escrito por Osamu Dazai <br>Capa Comum</span>
+                <div class="preco_produto">R$ 29,90</div>
+            </div>
+        
+            <div class="compra_carrinho">
+                <a href="detalhes/decliniodeumhomem.html">
+                <button class="button_default button_comprar">Comprar</button>
+                </a>
+                <button class="button_default button_add" popovertarget="adiciona_carrinho">
+                    <img src="../images/shopping_cart.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+
+        <!-- É Assim que acaba -->
+
+        <div class="produto">
+            <a href="detalhes/eassimqueacaba.html" class="img_produto">
+                <img src="../images/livros/assimacabamin/e-assim-que-acaba.png" alt="">
+            </a>
+            <a href="detalhes/eassimqueacaba.html" class="titulo_produto">É Assim que Acaba</a>
+
+            <div class="resumo_produto">
+                <span>Escrito por Collen Hoover <br>Capa Comum</span>
+                <div class="preco_produto">R$ 38,90</div>
+            </div>
+        
+            <div class="compra_carrinho">
+                <a href="detalhes/eassimqueacaba.html">
+                <button class="button_default button_comprar">Comprar</button>
+                </a>
+                <button class="button_default button_add" popovertarget="adiciona_carrinho">
+                    <img src="../images/shopping_cart.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+
+        <!--A Biblioteca da Meia-noite -->
+
+        <div class="produto">
+            <a href="detalhes/abibliotecadameianoite.html" class="img_produto">
+                <img src="../images/livros/bibliotecamin/biblioteca-da-meia-noite.jpg" alt="">
+            </a>
+            <a href="detalhes/abibliotecadameianoite.html" class="titulo_produto">A Biblioteca da Meia-noite</a>
+
+            <div class="resumo_produto">
+                <span>Escrito por Matt Haig <br>Capa Comum</span>
+                <div class="preco_produto">R$ 32,90</div>
+            </div>
+        
+            <div class="compra_carrinho">
+                <a href="detalhes/abibliotecadameianoite.html">
+                <button class="button_default button_comprar">Comprar</button>
+                </a>
+                <button class="button_default button_add" popovertarget="adiciona_carrinho">
+                    <img src="../images/shopping_cart.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Terra e sangue -->
+
+        <div class="produto">
+            <a href="detalhes/terraesangue.html" class="img_produto">
+                <img src="../images/livros/terraesanguemin/casa-de-terra-e-sangue.jpg" alt="">
+            </a>
+            <a href="detalhes/terraesangue.html" class="titulo_produto">Cidade da Lua Crescente: Casa de Terra e Sangue</a>
+
+            <div class="resumo_produto">
+                <span>Escrito por Sarah J. Maas <br>Capa Comum</span>
+                <div class="preco_produto">R$ 35,90</div>
+            </div>
+        
+            <div class="compra_carrinho">
+                <a href="detalhes/terraesangue.html">
+                <button class="button_default button_comprar">Comprar</button>
+                </a>
+                <button class="button_default button_add" popovertarget="adiciona_carrinho">
+                    <img src="../images/shopping_cart.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Heartstopper -->
+
+        <div class="produto">
+            <a href="detalhes/heartstopper.html" class="img_produto">
+                <img src="../images/livros/hearstoppermin/heartstopper-vol4.jpg" alt="">
+            </a>
+            <a href="detalhes/heartstopper.html" class="titulo_produto">Heartstopper: De mãos dadas</a>
+
+            <div class="resumo_produto">
+                <span>Escrito por Alice Oseman <br>Capa Comum</span>
+                <div class="preco_produto">R$ 42,90</div>
+            </div>
+        
+            <div class="compra_carrinho">
+                <a href="detalhes/heartstopper.html">
+                <button class="button_default button_comprar">Comprar</button>
+                </a>
+                <button class="button_default button_add" popovertarget="adiciona_carrinho">
+                    <img src="../images/shopping_cart.svg" alt="">
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Jogos Vorazes -->
+
+        <div class="produto">
+            <a href="detalhes/jogosvorazes.html" class="img_produto">
+                <img src="../images/livros/boxvorazesmin/box-trilogia-jogos-vorazes.png" alt="">
+            </a>
+            <a href="detalhes/jogosvorazes.html" class="titulo_produto">Box Jogos Vorazes</a>
+
+            <div class="resumo_produto">
+                <span>Escrito por Suzanne Collins <br>Capa Comum</span>
+                <div class="preco_produto">R$ 84,90</div>
+            </div>
+        
+            <div class="compra_carrinho">
+                <a href="detalhes/jogosvorazes.html">
+                <button class="button_default button_comprar">Comprar</button>
+                </a>
+                <button class="button_default button_add" popovertarget="adiciona_carrinho">
+                    <img src="../images/shopping_cart.svg" alt="">
+                </button>
+            </div>
+        </div>
+        
+
+        <!-- EXTRA -->
+
+
+        <!-- Manual de Assassinato para Boas Garotas -->
+
+
+        <!-- <div class="produto">
+            <a href="detalhes/manualdeassassinatoparaboasgarotas.html" class="img_produto">
+                <img src="../images/livros/manualmin/manual-de-assassinato-para-boas-garotas.png" alt="">
+            </a>
+            <a href="detalhes/manualdeassassinatoparaboasgarotas.html" class="titulo_produto">Box Jogos Vorazes</a>
+
+            <div class="resumo_produto">
+                <span>Escrito por Holly Jackson <br>Capa Comum</span>
+                <div class="preco_produto">R$ 41,90</div>
+            </div>
+        
+            <div class="compra_carrinho">
+                <a href="detalhes/manualdeassassinatoparaboasgarotas.html">
+                <button class="button_default button_comprar">Comprar</button>
+                </a>
+                <button class="button_default button_add" popovertarget="adiciona_carrinho">
+                    <img src="../images/shopping_cart.svg" alt="">
+                </button>
+            </div>
+        </div> -->
+
+
+        <!-- Kit Hopeless -->
+
+
+        <!-- <div class="produto">
+            <a href="detalhes/hopeless.html" class="img_produto">
+                <img src="../images/livros/hopelessmin/kit-hopeless.png" alt="">
+            </a>
+            <a href="detalhes/hopeless.html" class="titulo_produto">Box Jogos Vorazes</a>
+
+            <div class="resumo_produto">
+                <span>Escrito por Colleen Hoover <br>Capa Comum</span>
+                <div class="preco_produto">R$ 78,90</div>
+            </div>
+        
+            <div class="compra_carrinho">
+                <a href="detalhes/hopeless.html">
+                <button class="button_default button_comprar">Comprar</button>
+                </a>
+                <button class="button_default button_add" popovertarget="adiciona_carrinho">
+                    <img src="../images/shopping_cart.svg" alt="">
+                </button>
+            </div>
+        </div> -->
+
+    </div>
+
+
+            <div popover id="adiciona_carrinho">Adicionado ao Carrinho</div>
+        </div>
+
+        <a href="detalhes/alicenopaisdasmaravilhas.html" class="promo_link">
+            <div class="promo">
+                <div class="promo_img">
+                    <img src="../images/livros/alicemin/alice-no-pais-das-maravilhas.png" alt="">
+                </div>
+                <div class="promo_text">
+                    <span>50% OFF</span>
+                </div>
+            </div>
+        </a>
     </main>
 </body>
 
