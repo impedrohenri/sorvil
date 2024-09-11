@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/default.css">
     <link rel="stylesheet" href="../../styles/cabecalho.css">
+    <link rel="stylesheet" href="../../styles/detalhes.css">
     <link rel="shortcut icon" href="../../images/android-chrome-512x512.png" type="image/x-icon">
 
-    <title>Alice no País das Maravilhas</title>
+    <title>Alice No País das Maravilhas</title>
 </head>
 <body>
-     
+ 
     <header class="header">
         <!-- PARTE SUPERIOR DO CABEÇALHO (AZUL ESCURO) -->
         <div class="upper_navbar">
@@ -123,7 +124,7 @@
                 </a>
 
                 <!-- SAIR -->
-                <a href="../index.html" class="logout_div">
+                <a href="../../index.html" class="logout_div">
                     <div class="logout_content">
                         <img src="../../images/login.svg" alt="">
                         <p id="logout_text" class="hide_on_mobile">Sair</p>
@@ -133,5 +134,43 @@
         </div>
     </header>
 
+    <main>
+        <div class="detalhes_produto">
+            <div class="exibicao_produto">
+                <div><img class="imagem1" src="../../images/livros/alicemin/alice-no-pais-das-maravilhas.png" alt=""></div>
+                <div class="miniaturas">
+                    <div class="imagem2"><img src="../../images/livros/alicemin/alicemin1.png"></div>
+                    <div class="imagem3"><img src="../../images/livros/alicemin/alicemin2.png"></div>
+                    <div class="imagem4"><img src="../../images/livros/alicemin/alicemin3.png"></div>
+                    <div class="imagem5"><img src="../../images/livros/alicemin/alicemin4.png"></div>
+                </div>
+
+                <div class="preco_comprar_add">
+                    <div class="preco">R$ 27,90</div>
+                    <div class="comprar_ou_add">
+                    <a href=""><button class="button_default button_comprar">Comprar</button></a>
+                    <button class="button_default button_carrinho" popovertarget="adiciona_carrinho"><img src="../../images/shopping_cart.svg" alt=""></button></div>
+                    <div popover id="adiciona_carrinho">Produto Adicionado ao Carrinho</div>
+                </div>
+            </div>
+            <div class="descricao_produto">
+                <h3 class="alice">Alice No País das Maravilhas</h3>
+
+                <ul>
+                    <li><span>Escritor(a):</span> Lewis Carroll</li>
+                    <li><span>Gênero:</span> Aventura, Fantasia</li>
+                    <li><span>Editora:</span> Novo Século</li>
+                    <li><span>Data de Publicação:</span> 1ª edição (20 agosto 2023)
+                    </li>
+                </ul>
+
+                <p>O livro conta a história de uma menina chamada Alice que cai numa toca de coelho que a transporta para um lugar fantástico povoado por criaturas peculiares e antropomórficas, revelando uma lógica do absurdo, característica dos sonhos. Este está repleto de alusões satíricas dirigidas tanto aos amigos como aos inimigos de Carroll, de paródias a poemas populares infantis ingleses ensinados no século XIX e também de referências linguísticas e matemáticas frequentemente através de enigmas que contribuíram para a sua popularidade. É assim uma obra de difícil interpretação pois contém dois livros num só texto: um para crianças e outro para adultos.</p>
+
+                <a  href="https://www.skoob.com.br/alice-12004370ed122337280.html" target="_blank">Mais detalhes...</a>
+            </div>
+        </div>
+
+
+    </main>
 </body>
 </html>

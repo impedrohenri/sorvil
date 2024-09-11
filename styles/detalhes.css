@@ -1,0 +1,144 @@
+main{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.button_default{
+    display: block;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 0px;
+    cursor: pointer;
+    background-color: var(--dark_main_color);
+    color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 3px -1px #222222;
+    transition: 0.2s ;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+}
+
+.detalhes_produto{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    align-items: center;
+    width: 60%;
+    height: fit-content;
+    margin: 2vw;
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+    a{
+        text-decoration: none;
+    }
+}
+.exibicao_produto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    
+}
+
+
+.imagem1{
+    width: 18vw;
+    margin: 20px;
+    }
+.miniaturas{
+    display: flex;
+    margin-inline: auto;
+    flex-wrap: wrap;
+    div{
+        
+        outline: 1px solid rgb(235, 235, 235);
+        width: 20%;
+        min-width: fit-content;
+    }
+    img{
+        height: 65px;
+    }
+}
+
+.preco_comprar_add{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 10%;
+    
+}
+.preco{
+    font-size: calc(20px + 0.590625vw);
+    font-weight: 700;
+}
+.comprar_ou_add{
+        display: flex;
+        gap: 5%;
+    }
+.button_comprar{
+    padding-inline: 10px;
+    margin: none;
+    background-color: var(--darkest_color);
+
+}
+.button_comprar:hover{
+    background-color: var(--semi_black_color);
+}
+.button_carrinho{
+    background-color: var(--dark_main_color);
+    padding: 8px 8px 4px;
+    align-items: center;
+    justify-items: center;
+}
+.button_carrinho:hover{
+    background-color: var(--light_main_color);
+}
+#adiciona_carrinho{
+    font-size: 20px;
+    font-weight: 500;
+    border: 4px solid var(--semi_black_color);
+    border-radius: 5px;
+    box-shadow: inset 0px 0px 2px black;
+    text-align: center;
+    padding: 30px;
+}
+
+.descricao_produto{
+    border-left: 1px solid  rgb(236, 236, 236);
+    padding: 20px;
+    padding-top: 0px;
+    h3{
+        font-size: 30px;
+    }
+    .harrypotter{
+        font-family: "Harry_Potter";
+        font-size: 45px;
+        margin-top: 25px;
+        margin-bottom: 5px;
+    }
+    .alice{
+        font-family: "Alice";
+        font-size: 45px;
+        margin-top: 25px;
+        margin-bottom: 5px;
+
+    }
+    p{
+        margin-top: 25px;
+        font-size: 15px;
+        text-align: justify;
+    }
+    a{
+        transition: 300ms;
+        font-weight: 500;
+        color: var(--dark_main_color);
+    }
+    a:hover{
+        color: var(--semi_black_color);
+    }
+    span{
+        font-weight: 600;
+    }
+}
+

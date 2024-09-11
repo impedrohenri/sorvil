@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/default.css">
+    <link rel="stylesheet" href="../../styles/cabecalho.css">
+    <link rel="stylesheet" href="../../styles/detalhes.css">
+    <link rel="shortcut icon" href="../../images/android-chrome-512x512.png" type="image/x-icon">
+
+    <title>Heartstopper: De mãos dadas</title>
+</head>
+<body>
+ 
+    <header class="header">
+        <!-- PARTE SUPERIOR DO CABEÇALHO (AZUL ESCURO) -->
+        <div class="upper_navbar">
+            <!-- LOGO -->
+            <a href="../pagina_principal.html" class="logo">
+                <img src="../../images/sorvil.png" alt="">
+            </a>
+
+            <!-- DIV QUE COMPORTA A BARRA DE PESQUISA -->
+            <div class="search_bar_div">
+                <div class="search_background">
+                    <input class="search_bar" type="text" placeholder="Pesquisar livros">
+
+                    <div class="search_button_div">
+                        <input type="submit" class="search_button" value="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIV QUE COMPORTA OS ICONES DE PERFIL E CARRINHO -->
+            <div class="profile_and_cart">
+                <!-- PERFIL -->
+                <a href="" class="profile_div">
+                    <div class="profile_content">
+                        <img class="profile_img" src="../../images/profile_pic.svg" alt="">
+                        <p id="profile_text_box" class="hide_on_mobile"><span>Acessar</span> Perfil</p>
+                    </div>
+                </a>
+
+                <!-- CARRINHO -->
+                <a href="../carrinho.html" class="cart_div">
+                    <div class="cart_content">
+                        <img class="cart_img" src="../../images/shopping_cart.svg" alt="">
+                        <p class="cart_num">1</p>
+                        <p id="cart_text" class="hide_on_mobile">Carrinho</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- PARTE INFERIOR DO CABEÇALHO -->
+        <div class="bottom_navbar">
+            <!-- DIV QUE COMPORTA OS ICONES DE MENU E ENDEREÇO -->
+            <div class="menu_and_address">
+                <!-- MENU -->
+                <label for="menu_checkbox">
+                    <div class="menu">
+                        <img src="../../images/menu.svg" alt="">
+                    </div>
+                </label>
+                <input type="checkbox" id="menu_checkbox">
+
+                <!-- ENDEREÇO -->
+                <a href="">
+                    <div class="address_div">
+                        <div class="address_content">
+                            <img src="../../images/add_location.svg" alt="">
+                            <p id="address_text_box" class="hide_on_mobile">A entrega será feita em ... <br><span
+                                    id="address_text_bold">Atualizar local </span></p>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- DIV REFERENTE AO MENU LATERAL, VISÍVEL APENAS AO CLICAR EM MENU -->
+                <div class="menu_sidebar">
+                    <nav class="menu_nav">
+                        <div class="menu_conta"><img src="../../images/profile_pic.svg" alt="">Sua Conta</div>
+                        <div class="menu_topicos">Destaques</div>
+                        <div class="menu_destaques">Promoções</div>
+                        <div class="menu_destaques">Mais Vendidos</div>
+                        <div class="menu_destaques">Em Alta</div>
+                        <div class="menu_topicos">Categorias</div>
+                        <div class="menu_categorias">Ficção Científica</div>
+                        <div class="menu_categorias">Didáticos</div>
+                        <div class="menu_categorias">Religiosos</div>
+                        <div class="menu_categorias">True Crime</div>
+                        <div class="menu_categorias">Autoajuda</div>
+                        <div class="menu_categorias">Romances</div>
+                        <div class="menu_categorias">Suspense</div>
+                        <div class="menu_topicos">Outros</div>
+                        <div class="menu_categorias">Autores em alta</div>
+                        <div class="menu_categorias">Pré-venda</div>
+                        <div class="menu_categorias">Lançados Recentemente</div>
+                    </nav>
+
+                    <label for="menu_checkbox" class="bg_opaco">
+                        <div>x</div>
+                    </label>
+                </div>
+
+            </div>
+
+            <!-- DIV QUE COMPORTA AS CATEGORIAS -->
+            <nav class="categories">
+                <a href="" class="category_button">Fantasia</a>
+                <a href="" class="category_button">Romance</a>
+                <a href="" class="category_button">HQ's e Mangás</a>
+                <a href="" class="category_button">Suspense</a>
+                <a href="" class="category_button">Ficção Científica</a>
+            </nav>
+
+            <!-- DIV QUE COMPORTA OS ICONES DE SOBRE E SAIR -->
+            <div class="about_and_logout">
+                <!-- SOBRE -->
+                <a href="../sobre.html" class="about_div">
+                    <div class="about_content">
+                        <img src="../../images/info.svg" alt="">
+                        <p id="about_text" class="hide_on_mobile">Sobre</p>
+                    </div>
+                </a>
+
+                <!-- SAIR -->
+                <a href="../../index.html" class="logout_div">
+                    <div class="logout_content">
+                        <img src="../../images/login.svg" alt="">
+                        <p id="logout_text" class="hide_on_mobile">Sair</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="detalhes_produto">
+            <div class="exibicao_produto">
+                <div><img class="imagem1" src="../../images/livros/hearstoppermin/heartstopper-vol4.jpg" alt=""></div>
+                <div class="miniaturas">
+                    <div class="imagem2"><img src="../../images/livros/hearstoppermin/heartstoppermin2.png"></div>
+                    <div class="imagem3"><img src="../../images/livros/hearstoppermin/heartstoppermin3.png"></div>
+                    <div class="imagem4"><img src="../../images/livros/hearstoppermin/heartstoppermin4.png"></div>
+                    <div class="imagem5"><img src="../../images/livros/hearstoppermin/heartstoppermin5.png"></div>
+                </div>
+
+                <div class="preco_comprar_add">
+                    <div class="preco"></div>
+                    <div class="comprar_ou_add">
+                    <a href=""><button class="button_default button_comprar">Comprar</button></a>
+                    <button class="button_default button_carrinho" popovertarget="adiciona_carrinho"><img src="../../images/shopping_cart.svg" alt=""></button></div>
+                    <div popover id="adiciona_carrinho">Produto Adicionado ao Carrinho</div>
+                </div>
+            </div>
+            <div class="descricao_produto">
+                <h3>Heartstopper: De mãos dadas</h3>
+
+                <ul>
+                    <li><span>Escritor(a):</span> Alice Oseman</li>
+                    <li><span>Gênero:</span> Romance</li>
+                    <li><span>Editora:</span> Seguinte</li>
+                    <li><span>Data de Públicação:</span> 27 de junho 2022</li>
+                </ul>
+
+                <p>Charlie e Nick já não precisam esconder de ninguém no colégio que estão namorando, e agora, mais do que nunca, Charlie quer finalmente dizer “Eu te amo”. O que parece um gesto simples se torna bem complicado quando sua ansiedade o faz questionar se Nick se sente da mesma forma…
+                <br><br>
+                Nick, por sua vez, está com a cabeça cheia. Afinal, ele ainda não teve a oportunidade de se assumir para o pai, e se preocupa constantemente com Charlie, que dá sinais claros de ter um transtorno alimentar.
+                <br><br>
+                Conforme o relacionamento dos dois amadurece, os desafios que vêm pela frente ficam cada vez mais difíceis ― mas os garotos logo vão aprender que amar alguém nada mais é do que estar ao seu lado, juntos, de mãos dadas.</p>
+
+                <a  href="https://www.skoob.com.br/de-maos-dadas-11734125ed12150883.html" target="_blank">Mais detalhes...</a>
+            </div>
+        </div>
+
+
+    </main>
+</body>
+</html>
