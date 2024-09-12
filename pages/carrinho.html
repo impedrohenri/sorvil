@@ -6,6 +6,7 @@
     <link rel="icon" type="image/x-icon" href="../images/android-chrome-512x512.png">
     <link rel="stylesheet" href="../styles/default.css">
     <link rel="stylesheet" href="../styles/cabecalho.css">
+    <link rel="stylesheet" href="../styles/carrinho.css">
 
     <title>Carrinho</title>
 </head>
@@ -132,7 +133,109 @@
         </div>
     </header>
 
+    <main>
+        <div class="carrinho_compras">
+            <h1>Carrinho de compras</h1>
+            <div class="produto_carrinho">
+                <input type="checkbox" name="livro" id="">
+                <div class="img_prod_cart">
+                    <a href="/pages/detalhes/kitcidadedaluacrescente.html"><img src="../images/livros/kitcrescentcitymin/crescentcity.png" alt=""></a>
+                </div>
+                <div class="info_prod_cart">
+                    <div class="info_cima_cart">
+                    <a href="/pages/detalhes/kitcidadedaluacrescente.html"><span class="titulo_prod_cart">Kit Cidade da Lua Crescente</span></a>
+                    <span class="autor_qntd_cart">por Sarah J. Maas</span>
+                    
+                    <span class="autor_qntd_cart">Qntd. 
+                        <select id="quantidade">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </span>
+                    <span class="prod_tipo_cart">Capa Comum</span>
+                    </div>    
+                    
+                    <div class="valores_prod_cart">
+                        <div class="frete_preco_prod_cart">
+                            <span>Itens: R$ 64,90</span>
+                            <span>Frete: R$ 13,45</span>
+                        </div>
+                        <div class="soma_prod_cart">R$ 78,35</div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="hr"></div>
 
+            <div class="produto_carrinho">
+                <input type="checkbox" name="livro" id="">
+                <div class="img_prod_cart">
+                    <a href="../pages/detalhes/orgulhoepreconceito.html"><img src="../images/livros/orgulhomin/orgulho-e-preconceito.png" alt=""></a>
+                </div>
+                <div class="info_prod_cart">
+                    <div class="info_cima_cart">
+                    <a href="../pages/detalhes/orgulhoepreconceito.html"><span class="titulo_prod_cart">Orgulho e Preconceito</span></a>
+                    <span class="autor_qntd_cart">por Jane Austen</span>
+                    
+                    <span class="autor_qntd_cart">Qntd. 
+                        <select id="quantidade">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </span>
+                    <span class="prod_tipo_cart">Capa Comum</span>
+                    </div>    
+                    
+                    <div class="valores_prod_cart">
+                        <div class="frete_preco_prod_cart">
+                            <span>Itens: R$ 33,90</span>
+                            <span style="text-decoration: line-through;">Frete: R$ 13,45</span>
+                        </div>
+                        <div class="soma_prod_cart">R$ 33,90</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="resumo_cart">
+            <h2>Total:</h2>
+            <div class="prod_quantfrete_cart">
+                <span>Quantidade:</span>
+                <span>2 Produtos</span>
+            </div>
+            <div class="prod_preco_cart">
+                <span>Preço:</span>
+                <div>
+                    <span>R$ 64,90</span>
+                    <span>R$ 33,90</span>
+                </div>
+            </div>
+            <div class="prod_quantfrete_cart">
+                <span>Frete:</span>
+                <span>R$ 13,45</span>
+            </div>
+            <div class="prod_subtotal_cart">
+                <span>Subtotal:</span>
+                <span>R$ 112,25</span>
+            </div>
+            <a href="/pages/comprar/carrinho.html"><button class="button_default button_comprar_cart">Fechar pedido</button></a>
+        </div>
+    </main>
 </body>
 </html>
