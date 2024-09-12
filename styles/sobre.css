@@ -1,0 +1,265 @@
+body{
+    min-height: 2500px
+}
+
+main{
+    display: flex;
+    justify-content: center;
+}
+
+
+.conteudo_geral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-top: 20px;
+    padding: 2%;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255);
+
+    h1{
+        font-family: "Oswald";
+        color: var(--dark_main_color);
+        font-size: 70px;
+        font-weight: 900;
+        width: 98%;
+        margin: 0 auto 60px;
+        border-bottom: 1px solid var(--semi_black_color);
+    }
+    div{
+        width: 94%;
+    }
+}
+.intro{
+    h2{
+        font-family: "Oswald";
+        color: var(--dark_main_color);
+        font-size: 40px;
+        font-weight: 900;
+        margin: 0 0 20px 30px;
+    }
+    p{
+        margin-left: 50px;
+        font-size: 18px;
+        span{
+            font-weight: 600;
+        }
+    }
+    
+}
+.indice{
+    margin-top: 10vh;
+
+    summary{
+        font-size: 26px;
+        font-weight: 800;
+        color: var(--semi_black_color);
+        text-decoration: none;
+        
+    }
+    
+    ul{
+        width: 500px;
+        padding-top: 20px;
+        border-top: 1px solid var(--dark_main_color);
+        list-style-type: none;
+    }
+    a{
+        font-size: 23px;
+        font-weight: 600;
+        color: var(--semi_black_color);
+        text-decoration: none;
+    }
+    summary:hover, a:hover{
+        color: var(--dark_main_color);
+        cursor: pointer;
+    }
+}
+
+.ancora{
+    display: block;
+    height: 50px;
+    margin-top: -50px;
+    visibility: hidden;
+}
+
+.titulo_topicos{
+    font-family: "Oswald";
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--dark_main_color);
+}
+.paleta{
+    margin-top: 10vh;
+
+    .cores{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        border-radius: 6px;
+        background-color: rgb(230, 230, 230);
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+    }
+    .cor{
+        display: flex;
+        align-items: center;
+        text-align: center;
+        border-radius: 15px;
+        width: 60px;
+        height: 60px;
+        margin: 40px;
+        transition: 400ms;
+        span{
+            color: var(--light_color);
+            display: none;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+    .cor:hover{
+        border-radius: 23px;
+        width: fit-content;
+        padding-inline: 20px;
+        height: 90px;
+        
+        span{
+            display: block;
+        }
+    }
+    .cor5:hover{
+        span{
+            color: var(--dark_main_color);
+        }
+        
+    }
+
+    .cor1{
+        background-color: var(--dark_main_color);
+    }
+    .cor2{
+        background-color: var(--light_main_color);
+    }
+    .cor3{
+        background-color: var(--semi_black_color);
+    }
+    .cor4{
+        background-color: var(--darkest_color);
+    }
+    .cor5{
+        color: var(--dark_main_color);
+        background-color: var(--light_color);
+        border: 1px solid rgb(200, 200, 200);
+    }
+    
+}
+
+.fontes{
+    margin-top: 20vh;
+
+    .font_box{
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+        height: 300px;
+        padding: 2vh 0 2vh 0;
+        border: 1px solid rgb(220, 220, 220);
+        border-radius: 8px;
+        gap: 10px;
+        margin-top: 20px;
+
+
+        .texto_exemplo{
+            margin-left: 2vw;
+            transition: 300ms;
+            font-size: 40px;
+            font-weight: 600;
+            width: fit-content;
+        }
+
+        #font_Roboto{
+            font-family: "Roboto";
+        }
+        #font_Oswald{
+            font-family: "Oswald";
+        }
+        #font_Harry{
+            font-family: "Harry Potter";
+            font-size: 50px;
+        }
+        #font_Alice{
+            font-family: "Alice";
+            font-size: 50px;
+        }
+    }
+
+    .texto_exemplo:hover{
+        font-size: 60px;
+        color: var(--semi_black_color);
+    }
+
+    #font_Harry:hover{
+        font-family: "Harry Potter";
+        font-size: 70px;
+    }
+    #font_Alice:hover{
+        font-family: "Alice";
+        font-size: 70px;
+    }
+    
+}
+
+.organigacao{
+    margin-top: 20vh;
+    div{
+        width: 100%;
+    }
+    p{
+        width: 98%;
+        text-align: justify;
+        margin-inline: auto;
+        abbr{
+            text-decoration: none;
+            font-weight: 600;
+        }
+    }
+
+
+}
+.box_path{
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    padding: 2vh 0 2vh 0;
+    border: 1px solid rgb(220, 220, 220);
+    border-radius: 8px;
+    gap: 10px;
+    margin-top: 20px;
+    
+
+    .caminhos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 2vw;
+        div{
+            display: flex;
+            flex-direction: column;
+        }
+        span{
+            color: var(--semi_black_color);
+            font-weight: 500;
+        }
+        .path{
+            color: black;
+            font-weight: 500;
+        }
+    }
+}

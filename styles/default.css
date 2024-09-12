@@ -13,15 +13,24 @@ body {
 }
 
 @font-face {
-    font-family: "Harry_Potter";
+    font-family: "Harry Potter";
     src: url(../fonts/harry_p/HARRYP__.TTF);
 }
 @font-face {
     font-family: "Alice";
     src: url(../fonts/alice_in_wonderland/Alice_in_Wonderland_3.ttf);
 }
+@font-face {
+    font-family: "Oswald";
+    src: url(../fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
 
-/* body:has(.logout_div:hover){
+body:has(#dark_main_color_checkbox:checked){
     --dark_main_color: rgb(50, 50, 50);
+}
+body:has(#light_main_color_checkbox:checked){
     --light_main_color: rgb(100, 100, 100);
-} */
+    /* #light_main_color_checkbox{
+    
+    }*/
+} 
