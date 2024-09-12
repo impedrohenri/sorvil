@@ -132,7 +132,6 @@
 
         function validar(){
 
-            //Valida o Nome
             if (nome.value == ""){
                 msgNome.textContent = 'Digite seu nome';
                 nome.style.outline = '2px solid #FF0000';
@@ -140,7 +139,6 @@
                 return false;
             }
 
-            // Valida sexo
             
             if(document.getElementById('feminino').checked) {
   
@@ -155,7 +153,6 @@
             }
             
 
-            // Valida o email
             if (email.value == ""){
                 msgEmail.textContent = "Digite seu email";
                 email.style.outline = '2px solid #FF0000';
@@ -169,14 +166,12 @@
                 return false;
             }
             
-            // Valida a senha
             if ((senha.value == '') || (senha.value.length < 8)){
                 msgSenha.textContent = "Mínimo de 8 caracteres necessários";
                 senha.style.outline = '2px solid #FF0000';
                 senha.focus()
                 return false;
             }
-            // Confirmação de senha
             else if (senha.value != confSenha.value){
                 msgConfSenha.textContent = 'As senhas não são iguais';
                 confSenha.style.outline = '2px solid #FF0000';
@@ -195,7 +190,6 @@
             
         }
         
-        // Limpa as mensagens de erro
             function limpar(id, msg){
                 id.style.outline = ''
                 msg.textContent = ''

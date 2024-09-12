@@ -21,13 +21,15 @@ main{
 
 .detalhes_produto{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     align-items: center;
     width: 60%;
     height: fit-content;
     margin: 2vw;
     border-radius: 8px;
     background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(220, 220, 220);
+    padding-bottom: 3vh;
     a{
         text-decoration: none;
     }
@@ -36,28 +38,29 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 100%;
     
 }
 
 
 .imagem1{
-    width: 18vw;
+    display: flex;
+    width: 80%;
     margin: 20px;
+    margin-inline: auto;
     }
 .miniaturas{
     display: flex;
     margin-inline: auto;
-    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
     div{
-        
         outline: 1px solid rgb(235, 235, 235);
-        width: 20%;
-        min-width: fit-content;
+        max-width: 20%;
     }
     img{
-        height: 65px;
+        width: 90%;
     }
 }
 
@@ -65,7 +68,8 @@ main{
     display: flex;
     justify-content: space-between;
     width: 80%;
-    margin: 10%;
+    margin-top: 20px;
+    margin-inline: 10%;
     
 }
 .preco{
@@ -105,9 +109,13 @@ main{
 }
 
 .descricao_produto{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     border-left: 1px solid  rgb(236, 236, 236);
-    padding: 20px;
-    padding-top: 0px;
+    padding-inline: 40px;
+    
     h3{
         font-size: 30px;
     }
