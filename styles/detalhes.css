@@ -47,6 +47,7 @@ main{
 .imagem1{
     display: flex;
     width: 80%;
+    max-height: 60vh;
     margin: 20px;
     margin-inline: auto;
     }

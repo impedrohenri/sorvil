@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titan+One&display=swap');
 
-body {
-    margin: 0px;
-    background-color: rgb(245, 245, 220);
-    font-family: 'Roboto';
-    --dark_main_color: rgb(2, 83, 115);
-    --light_main_color: rgb(53, 150, 189);
-    --semi_black_color: rgb(230, 99, 0);
-    --darkest_color: rgb(167, 74, 0);
-    --light_color: rgb(245, 245, 220);
-
-}
-
 @font-face {
     font-family: "Harry Potter";
     src: url(../fonts/harry_p/HARRYP__.TTF);
@@ -25,6 +13,22 @@ body {
     src: url(../fonts/Oswald/Oswald-VariableFont_wght.ttf);
 }
 
+html{
+    scroll-behavior: smooth;
+    
+}
+
+body {
+    margin: 0px;
+    background-color: rgb(245, 245, 220);
+    font-family: 'Roboto';
+    --dark_main_color: rgb(2, 83, 115);
+    --light_main_color: rgb(53, 150, 189);
+    --semi_black_color: rgb(230, 99, 0);
+    --darkest_color: rgb(167, 74, 0);
+    --light_color: rgb(245, 245, 220);
+
+}
 body:has(#dark_main_color_checkbox:checked){
     --dark_main_color: rgb(50, 50, 50);
 }
