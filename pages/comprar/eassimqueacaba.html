@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>É Assim que Acaba</title>
+    <title>A Biblioteca da Meia-noite</title>
     <link rel="stylesheet" href="../../styles/default.css">
     <link rel="stylesheet" href="../../styles/cabecalho.css">
     <link rel="stylesheet" href="../../styles/comprar.css">
@@ -148,22 +148,28 @@
                         <div class="hr"></div>
                         <form action="" class="formulario">
                             <label for="nome_id">Nome completo (nome e sobrenome)</label>
-                            <input class="input_alnum" type="text" id="nome_id">
+                            <input class="input_alnum" type="text" id="nome_id" oninput="limpar(nome_id, msgNome)">
+                            <span class="msgValidar" id="msgNome">Digite seu nome</span>
 
                             <label for="endereco_id">Endereço</label>
-                            <input class="input_alnum" type="text" id="endereco_id" placeholder="Nome da rua">
+                            <input class="input_alnum" type="text" id="endereco_id" placeholder="Nome da rua" oninput="limpar(endereco_id, msgEndereco)">
+                            <span class="msgValidar" id="msgEndereco">Informe um endereço pa a entrega</span>
 
                             <label for="numero_id">Número da residência</label>
-                            <input class="input_alnum" type="text" id="numero_id" placeholder="">
+                            <input class="input_alnum" type="text" id="numero_id" placeholder="" oninput="limpar(numero_id, msgNumeroRes)">
+                            <span class="msgValidar" id="msgNumeroRes">Informe o número da residência</span>
 
-                            <label for="postalcode">CEP</label>
-                            <input class="input_alnum" type="text" id="postalcode" placeholder="">
+                            <label for="postalcode_id">CEP</label>
+                            <input class="input_alnum" type="text" id="postalcode_id" placeholder="" oninput="limpar(postalcode_id, msgPostalCode)">
+                            <span class="msgValidar" id="msgPostalCode">Digite o CEP </span>
 
                             <label for="cidade_id">Cidade</label>
-                            <input class="input_alnum" type="text" id="cidade_id" placeholder="Nome da cidadde">
+                            <input class="input_alnum" type="text" id="cidade_id" placeholder="Nome da cidadde" oninput="limpar(cidade_id, msgCidade)">
+                            <span class="msgValidar" id="msgCidade">Digite o nome da sua cidade</span>
 
                             <label for="bairro_id">Bairro</label>
-                            <input class="input_alnum" type="text" id="bairro_id" placeholder="Nome do Bairro">
+                            <input class="input_alnum" type="text" id="bairro_id" placeholder="Nome do Bairro" oninput="limpar(bairro_id, msgBairro)">
+                            <span class="msgValidar" id="msgBairro">Digite o nome do seu bairro</span>
 
                             <div><button type="reset" class="button_default button_limpar">Limpar</button></div>
                         </form>
@@ -172,7 +178,7 @@
 
                 <div class="hr"></div>
 
-                <div class="formularios">
+                <div class="formularios" id="metodoValidar">
                     <div class="pagamento">
                         <span class="forms_titulos">2 - Método de pagamento</span>
                         <div class="hr"></div>
@@ -181,21 +187,21 @@
 
                                 <span class="span_metodo">Cartão de crédito</span>
                                 <div class="metodo" id="cartao_div">
-                                    <input type="radio" name="metodo_nome" id="cartao">
+                                    <input type="radio" name="metodo_nome" id="cartao" onclick="limpar(metodoValidar, msgMetodo)">
                                     <img src="../../images/cartao_credito.svg" alt="">
                                     <p><span>Parcele pagando com cartão de crédito.</span>
                                 </div>
 
                                 <span class="span_metodo">Pix</span>
                                 <div class="metodo" id="pix_div">
-                                    <input type="radio" name="metodo_nome" id="pix">
+                                    <input type="radio" name="metodo_nome" id="pix" onclick="limpar(metodoValidar, msgMetodo)">
                                     <img src="../../images/icons8-foto.svg" alt="">
                                     <span>O código Pix gerado para o pagamento é válido por 30 minutos após a finalização do pedido.</span>
                                 </div>
 
                                 <span class="span_metodo">Boleto</span>
                                 <div class="metodo" id="boleto_div">
-                                    <input type="radio" name="metodo_nome" id="boleto">
+                                    <input type="radio" name="metodo_nome" id="boleto" onclick="limpar(metodoValidar, msgMetodo)">
                                     <img src="../../images/boleto.svg" alt="">
                                     <span>Vencimento em 1 dia útil. A data de entrega será alterada devido ao tempo de processamento do Boleto. Veja mais na próxima página.</span>
                                 </div>
@@ -205,6 +211,7 @@
                         </form>
                     </div>
                 </div>
+                <span class="msgValidar" id="msgMetodo">Escolha uma forma de pagamento</span>
 
                 <div class="hr"></div>
 
@@ -251,7 +258,7 @@
 
                 <div>
                     <div>
-                        <button class="button_default button_confirmar" type="submit" popovertarget="compra_confirmada">Confirmar</button>
+                        <button class="button_default button_confirmar" type="submit"  onclick="validar()">Confirmar</button>
                         <div popover id="compra_confirmada"> Compra realizada com sucesso!</div>
                     </div>
                 </div>
@@ -259,5 +266,95 @@
         </main>
 
     </body>
+
+    <script>
+        var nome = document.getElementById("nome_id")
+        var endereco = document.getElementById("endereco_id")
+        var numero_residencia = document.getElementById("numero_id")
+        var cep = document.getElementById("postalcode_id")
+        var  cidade = document.getElementById("cidade_id")
+        var bairro = document.getElementById("bairro_id")
+        var cartao = document.getElementById("cartao")
+        var pix = document.getElementById("pix")
+        var boleto = document.getElementById("boleto")
+        var metodo = document.getElementById("metodoValidar")
+
+
+        var msgNome = document.getElementById("msgNome")
+        var msgEndereco = document.getElementById("msgEndereco")
+        var msgNumeroRes = document.getElementById("msgNumeroRes")
+        var msgPostalCode = document.getElementById("msgPostalCode")
+        var msgCidade = document.getElementById("msgCidade")
+        var msgBairro = document.getElementById("msgBairro")
+        var msgMetodo = document.getElementById("msgMetodo")
+
+        var popover = document.getElementById("compra_confirmada")
+
+
+        function validar() {
+
+            if (nome.value == "") {
+                msgNome.style.display = "block";
+                nome.style.outline = "2px solid #FF0000";
+                nome.focus();
+                return false;
+
+            }
+
+            if (endereco.value == "") {
+                msgEndereco.style.display = "block";
+                endereco.style.outline = "2px solid #FF0000";
+                endereco.focus();
+                return false;
+
+            }
+
+            if (numero_residencia.value == "") {
+                msgNumeroRes.style.display = "block";
+                numero_residencia.style.outline = "2px solid #FF0000";
+                numero_residencia.focus();
+                return false;
+            }
+
+            if (cep.value == "") {
+                msgPostalCode.style.display = "block";
+                cep.style.outline = "2px solid #FF0000";
+                cep.focus();
+                return false;
+
+            }
+
+            if (cidade.value == "") {
+                msgCidade.style.display = "block";
+                cidade.style.outline = "2px solid #FF0000";
+                cidade.focus();
+                return false;
+
+            }
+
+            if (bairro.value == "") {
+                msgBairro.style.display = "block";
+                bairro.style.outline = "2px solid #FF0000";
+                bairro.focus();
+                return false;
+
+            }
+
+            if (!cartao.checked && !pix.checked && !boleto.checked){
+                msgMetodo.style.display = "block"
+                metodo.style.outline = "3px solid #FF0000"
+                cartao.focus();
+                return false;
+            }
+
+            popover.showPopover("popover");
+            
+        };
+
+        function limpar(id, msg){
+                id.style.outline = '';
+                msg.style.display = '';
+            }
+    </script>
 
 </html>

@@ -79,14 +79,20 @@ body{
     .input_alnum{
         border: none;
         border-radius: 4px;
-        padding: 8px;
+        padding: 10px;
         font-size: 14px;
     }
     .input_alnum:focus-within{
         outline: 2px solid var(--semi_black_color);
     }
+    
 }
-
+.msgValidar{
+        font-size: 14px;
+        color: red;
+        margin: 5px 0 10px 10px;
+        display: none;
+    }
 .button_limpar{
     font-size: 16px;
     font-weight: 500;
