@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A Biblioteca da Meia-noite</title>
+    <title>Finalizar Compra</title>
     <link rel="stylesheet" href="../../styles/default.css">
     <link rel="stylesheet" href="../../styles/cabecalho.css">
     <link rel="stylesheet" href="../../styles/comprar.css">
@@ -14,221 +14,230 @@
 
 <body>
 
-    <body>
+    <header class="header">
+        <!-- PARTE SUPERIOR DO CABEÇALHO (AZUL ESCURO) -->
+        <div class="upper_navbar">
+            <!-- LOGO -->
+            <a href="../pagina_principal.html" class="logo">
+                <img src="../../images/sorvil.png" alt="">
+            </a>
 
-        <header class="header">
-            <!-- PARTE SUPERIOR DO CABEÇALHO (AZUL ESCURO) -->
-            <div class="upper_navbar">
-                <!-- LOGO -->
-                <a href="../pagina_principal.html" class="logo">
-                    <img src="../../images/sorvil.png" alt="">
+            <!-- DIV QUE COMPORTA A BARRA DE PESQUISA -->
+            <div class="search_bar_div">
+                <div class="search_background">
+                    <input class="search_bar" type="text" placeholder="Pesquisar livros">
+
+                    <div class="search_button_div">
+                        <input type="submit" class="search_button" value="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIV QUE COMPORTA OS ICONES DE PERFIL E CARRINHO -->
+            <div class="profile_and_cart">
+                <!-- PERFIL -->
+                <a href="" class="profile_div">
+                    <div class="profile_content">
+                        <img class="profile_img" src="../../images/profile_pic.svg" alt="">
+                        <p id="profile_text_box" class="hide_on_mobile"><span>Acessar</span> Perfil</p>
+                    </div>
                 </a>
 
-                <!-- DIV QUE COMPORTA A BARRA DE PESQUISA -->
-                <div class="search_bar_div">
-                    <div class="search_background">
-                        <input class="search_bar" type="text" placeholder="Pesquisar livros">
+                <!-- CARRINHO -->
+                <a href="../carrinho.html" class="cart_div">
+                    <div class="cart_content">
+                        <img class="cart_img" src="../../images/shopping_cart.svg" alt="">
+                        <p class="cart_num">1</p>
+                        <p id="cart_text" class="hide_on_mobile">Carrinho</p>
+                    </div>
+                </a>
+            </div>
+        </div>
 
-                        <div class="search_button_div">
-                            <input type="submit" class="search_button" value="">
+        <!-- PARTE INFERIOR DO CABEÇALHO -->
+        <div class="bottom_navbar">
+            <!-- DIV QUE COMPORTA OS ICONES DE MENU E ENDEREÇO -->
+            <div class="menu_and_address">
+                <!-- MENU -->
+                <label for="menu_checkbox">
+                    <div class="menu">
+                        <img src="../../images/menu.svg" alt="">
+                    </div>
+                </label>
+                <input type="checkbox" id="menu_checkbox">
+
+                <!-- ENDEREÇO -->
+                <a href="">
+                    <div class="address_div">
+                        <div class="address_content">
+                            <img src="../../images/add_location.svg" alt="">
+                            <p id="address_text_box" class="hide_on_mobile">A entrega será feita em ... <br><span
+                                    id="address_text_bold">Atualizar local </span></p>
                         </div>
                     </div>
-                </div>
+                </a>
 
-                <!-- DIV QUE COMPORTA OS ICONES DE PERFIL E CARRINHO -->
-                <div class="profile_and_cart">
-                    <!-- PERFIL -->
-                    <a href="" class="profile_div">
-                        <div class="profile_content">
-                            <img class="profile_img" src="../../images/profile_pic.svg" alt="">
-                            <p id="profile_text_box" class="hide_on_mobile"><span>Acessar</span> Perfil</p>
-                        </div>
-                    </a>
+                <!-- DIV REFERENTE AO MENU LATERAL, VISÍVEL APENAS AO CLICAR EM MENU -->
+                <div class="menu_sidebar">
+                    <nav class="menu_nav">
+                        <div class="menu_conta"><img src="../../images/profile_pic.svg" alt="">Sua Conta</div>
+                        <div class="menu_topicos">Destaques</div>
+                        <div class="menu_destaques">Promoções</div>
+                        <div class="menu_destaques">Mais Vendidos</div>
+                        <div class="menu_destaques">Em Alta</div>
+                        <div class="menu_topicos">Categorias</div>
+                        <div class="menu_categorias">Ficção Científica</div>
+                        <div class="menu_categorias">Didáticos</div>
+                        <div class="menu_categorias">Religiosos</div>
+                        <div class="menu_categorias">True Crime</div>
+                        <div class="menu_categorias">Autoajuda</div>
+                        <div class="menu_categorias">Romances</div>
+                        <div class="menu_categorias">Suspense</div>
+                        <div class="menu_topicos">Outros</div>
+                        <div class="menu_categorias">Autores em alta</div>
+                        <div class="menu_categorias">Pré-venda</div>
+                        <div class="menu_categorias">Lançados Recentemente</div>
+                    </nav>
 
-                    <!-- CARRINHO -->
-                    <a href="../carrinho.html" class="cart_div">
-                        <div class="cart_content">
-                            <img class="cart_img" src="../../images/shopping_cart.svg" alt="">
-                            <p class="cart_num">1</p>
-                            <p id="cart_text" class="hide_on_mobile">Carrinho</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-            <!-- PARTE INFERIOR DO CABEÇALHO -->
-            <div class="bottom_navbar">
-                <!-- DIV QUE COMPORTA OS ICONES DE MENU E ENDEREÇO -->
-                <div class="menu_and_address">
-                    <!-- MENU -->
-                    <label for="menu_checkbox">
-                        <div class="menu">
-                            <img src="../../images/menu.svg" alt="">
-                        </div>
+                    <label for="menu_checkbox" class="bg_opaco">
+                        <div>x</div>
                     </label>
-                    <input type="checkbox" id="menu_checkbox">
-
-                    <!-- ENDEREÇO -->
-                    <a href="">
-                        <div class="address_div">
-                            <div class="address_content">
-                                <img src="../../images/add_location.svg" alt="">
-                                <p id="address_text_box" class="hide_on_mobile">A entrega será feita em ... <br><span
-                                        id="address_text_bold">Atualizar local </span></p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- DIV REFERENTE AO MENU LATERAL, VISÍVEL APENAS AO CLICAR EM MENU -->
-                    <div class="menu_sidebar">
-                        <nav class="menu_nav">
-                            <div class="menu_conta"><img src="../../images/profile_pic.svg" alt="">Sua Conta</div>
-                            <div class="menu_topicos">Destaques</div>
-                            <div class="menu_destaques">Promoções</div>
-                            <div class="menu_destaques">Mais Vendidos</div>
-                            <div class="menu_destaques">Em Alta</div>
-                            <div class="menu_topicos">Categorias</div>
-                            <div class="menu_categorias">Ficção Científica</div>
-                            <div class="menu_categorias">Didáticos</div>
-                            <div class="menu_categorias">Religiosos</div>
-                            <div class="menu_categorias">True Crime</div>
-                            <div class="menu_categorias">Autoajuda</div>
-                            <div class="menu_categorias">Romances</div>
-                            <div class="menu_categorias">Suspense</div>
-                            <div class="menu_topicos">Outros</div>
-                            <div class="menu_categorias">Autores em alta</div>
-                            <div class="menu_categorias">Pré-venda</div>
-                            <div class="menu_categorias">Lançados Recentemente</div>
-                        </nav>
-
-                        <label for="menu_checkbox" class="bg_opaco">
-                            <div>x</div>
-                        </label>
-                    </div>
-
                 </div>
 
-                <!-- DIV QUE COMPORTA AS CATEGORIAS -->
-                <nav class="categories">
-                    <a href="" class="category_button">Fantasia</a>
-                    <a href="" class="category_button">Romance</a>
-                    <a href="" class="category_button">HQ's e Mangás</a>
-                    <a href="" class="category_button">Suspense</a>
-                    <a href="" class="category_button">Ficção Científica</a>
-                </nav>
+            </div>
 
-                <!-- DIV QUE COMPORTA OS ICONES DE SOBRE E SAIR -->
-                <div class="about_and_logout">
-                    <!-- SOBRE -->
-                    <a href="../sobre.html" class="about_div">
-                        <div class="about_content">
-                            <img src="../../images/info.svg" alt="">
-                            <p id="about_text" class="hide_on_mobile">Sobre</p>
-                        </div>
-                    </a>
+            <!-- DIV QUE COMPORTA AS CATEGORIAS -->
+            <nav class="categories">
+                <a href="" class="category_button">Fantasia</a>
+                <a href="" class="category_button">Romance</a>
+                <a href="" class="category_button">HQ's e Mangás</a>
+                <a href="" class="category_button">Suspense</a>
+                <a href="" class="category_button">Ficção Científica</a>
+            </nav>
 
-                    <!-- SAIR -->
-                    <a href="../../index.html" class="logout_div">
-                        <div class="logout_content">
-                            <img src="../../images/login.svg" alt="">
-                            <p id="logout_text" class="hide_on_mobile">Sair</p>
-                        </div>
-                    </a>
+            <!-- DIV QUE COMPORTA OS ICONES DE SOBRE E SAIR -->
+            <div class="about_and_logout">
+                <!-- SOBRE -->
+                <a href="../sobre.html" class="about_div">
+                    <div class="about_content">
+                        <img src="../../images/info.svg" alt="">
+                        <p id="about_text" class="hide_on_mobile">Sobre</p>
+                    </div>
+                </a>
+
+                <!-- SAIR -->
+                <a href="../../index.html" class="logout_div">
+                    <div class="logout_content">
+                        <img src="../../images/login.svg" alt="">
+                        <p id="logout_text" class="hide_on_mobile">Sair</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="finalizar_compra">
+            <h1>Finalizar Compra</h1>
+            <div class="formularios">
+                <div class="endereco">
+                    <span class="forms_titulos">1 - Insira um endereço de envio</span>
+
+                    <div class="hr"></div>
+                    <form action="" class="formulario">
+                        <label for="nome_id">Nome completo (nome e sobrenome)</label>
+                        <input class="input_alnum" type="text" id="nome_id" oninput="limpar(nome_id, msgNome)">
+                        <span class="msgValidar" id="msgNome">Digite seu nome</span>
+
+                        <label for="endereco_id">Endereço</label>
+                        <input class="input_alnum" type="text" id="endereco_id" placeholder="Nome da rua"
+                            oninput="limpar(endereco_id, msgEndereco)">
+                        <span class="msgValidar" id="msgEndereco">Informe um endereço pa a entrega</span>
+
+                        <label for="numero_id">Número da residência</label>
+                        <input class="input_alnum" type="text" id="numero_id" placeholder=""
+                            oninput="limpar(numero_id, msgNumeroRes)">
+                        <span class="msgValidar" id="msgNumeroRes">Informe o número da residência</span>
+
+                        <label for="postalcode_id">CEP</label>
+                        <input class="input_alnum" type="text" id="postalcode_id" placeholder=""
+                            oninput="limpar(postalcode_id, msgPostalCode)">
+                        <span class="msgValidar" id="msgPostalCode">Digite o CEP </span>
+
+                        <label for="cidade_id">Cidade</label>
+                        <input class="input_alnum" type="text" id="cidade_id" placeholder="Nome da cidadde"
+                            oninput="limpar(cidade_id, msgCidade)">
+                        <span class="msgValidar" id="msgCidade">Digite o nome da sua cidade</span>
+
+                        <label for="bairro_id">Bairro</label>
+                        <input class="input_alnum" type="text" id="bairro_id" placeholder="Nome do Bairro"
+                            oninput="limpar(bairro_id, msgBairro)">
+                        <span class="msgValidar" id="msgBairro">Digite o nome do seu bairro</span>
+
+                        <div><button type="reset" class="button_default button_limpar">Limpar</button></div>
+                    </form>
                 </div>
             </div>
-        </header>
 
-        <main>
-            <div class="finalizar_compra">
-                <h1>Finalizar Compra</h1>
-                <div class="formularios">
-                    <div class="endereco">
-                        <span class="forms_titulos">1 - Insira um endereço de envio</span>
+            <div class="hr"></div>
 
-                        <div class="hr"></div>
-                        <form action="" class="formulario">
-                            <label for="nome_id">Nome completo (nome e sobrenome)</label>
-                            <input class="input_alnum" type="text" id="nome_id" oninput="limpar(nome_id, msgNome)">
-                            <span class="msgValidar" id="msgNome">Digite seu nome</span>
+            <div class="formularios" id="metodoValidar">
+                <div class="pagamento">
+                    <span class="forms_titulos">2 - Método de pagamento</span>
+                    <div class="hr"></div>
+                    <form action="" class="formulario">
+                        <div class="metodos_pagamento">
 
-                            <label for="endereco_id">Endereço</label>
-                            <input class="input_alnum" type="text" id="endereco_id" placeholder="Nome da rua" oninput="limpar(endereco_id, msgEndereco)">
-                            <span class="msgValidar" id="msgEndereco">Informe um endereço pa a entrega</span>
-
-                            <label for="numero_id">Número da residência</label>
-                            <input class="input_alnum" type="text" id="numero_id" placeholder="" oninput="limpar(numero_id, msgNumeroRes)">
-                            <span class="msgValidar" id="msgNumeroRes">Informe o número da residência</span>
-
-                            <label for="postalcode_id">CEP</label>
-                            <input class="input_alnum" type="text" id="postalcode_id" placeholder="" oninput="limpar(postalcode_id, msgPostalCode)">
-                            <span class="msgValidar" id="msgPostalCode">Digite o CEP </span>
-
-                            <label for="cidade_id">Cidade</label>
-                            <input class="input_alnum" type="text" id="cidade_id" placeholder="Nome da cidadde" oninput="limpar(cidade_id, msgCidade)">
-                            <span class="msgValidar" id="msgCidade">Digite o nome da sua cidade</span>
-
-                            <label for="bairro_id">Bairro</label>
-                            <input class="input_alnum" type="text" id="bairro_id" placeholder="Nome do Bairro" oninput="limpar(bairro_id, msgBairro)">
-                            <span class="msgValidar" id="msgBairro">Digite o nome do seu bairro</span>
-
-                            <div><button type="reset" class="button_default button_limpar">Limpar</button></div>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="hr"></div>
-
-                <div class="formularios" id="metodoValidar">
-                    <div class="pagamento">
-                        <span class="forms_titulos">2 - Método de pagamento</span>
-                        <div class="hr"></div>
-                        <form action="" class="formulario">
-                            <div class="metodos_pagamento">
-
-                                <span class="span_metodo">Cartão de crédito</span>
-                                <div class="metodo" id="cartao_div">
-                                    <input type="radio" name="metodo_nome" id="cartao" onclick="limpar(metodoValidar, msgMetodo)">
-                                    <img src="../../images/cartao_credito.svg" alt="">
-                                    <p><span>Parcele pagando com cartão de crédito.</span>
-                                </div>
-
-                                <span class="span_metodo">Pix</span>
-                                <div class="metodo" id="pix_div">
-                                    <input type="radio" name="metodo_nome" id="pix" onclick="limpar(metodoValidar, msgMetodo)">
-                                    <img src="../../images/icons8-foto.svg" alt="">
-                                    <span>O código Pix gerado para o pagamento é válido por 30 minutos após a finalização do pedido.</span>
-                                </div>
-
-                                <span class="span_metodo">Boleto</span>
-                                <div class="metodo" id="boleto_div">
-                                    <input type="radio" name="metodo_nome" id="boleto" onclick="limpar(metodoValidar, msgMetodo)">
-                                    <img src="../../images/boleto.svg" alt="">
-                                    <span>Vencimento em 1 dia útil. A data de entrega será alterada devido ao tempo de processamento do Boleto. Veja mais na próxima página.</span>
-                                </div>
-
-                                
+                            <span class="span_metodo">Cartão de crédito</span>
+                            <div class="metodo" id="cartao_div">
+                                <input type="radio" name="metodo_nome" id="cartao"
+                                    onclick="limpar(metodoValidar, msgMetodo)">
+                                <img src="../../images/cartao_credito.svg" alt="">
+                                <p><span>Parcele pagando com cartão de crédito.</span>
                             </div>
-                        </form>
-                    </div>
+
+                            <span class="span_metodo">Pix</span>
+                            <div class="metodo" id="pix_div">
+                                <input type="radio" name="metodo_nome" id="pix"
+                                    onclick="limpar(metodoValidar, msgMetodo)">
+                                <img src="../../images/icons8-foto.svg" alt="">
+                                <span>O código Pix gerado para o pagamento é válido por 30 minutos após a
+                                    finalização do pedido.</span>
+                            </div>
+
+                            <span class="span_metodo">Boleto</span>
+                            <div class="metodo" id="boleto_div">
+                                <input type="radio" name="metodo_nome" id="boleto"
+                                    onclick="limpar(metodoValidar, msgMetodo)">
+                                <img src="../../images/boleto.svg" alt="">
+                                <span>Vencimento em 1 dia útil. A data de entrega será alterada devido ao tempo de
+                                    processamento do Boleto. Veja mais na próxima página.</span>
+                            </div>
+
+
+                        </div>
+                    </form>
                 </div>
-                <span class="msgValidar" id="msgMetodo">Escolha uma forma de pagamento</span>
+            </div>
+            <span class="msgValidar" id="msgMetodo">Escolha uma forma de pagamento</span>
 
-                <div class="hr"></div>
+            <div class="hr"></div>
 
-                <div class="formularios">
-                    <div class="detalhes">
-                        <span class="forms_titulos">3 - Confirmar compra</span>
-                        <div class="hr"></div>
-                        <span class="forms_titulos">Detalhes</span>
-                        <div class="detalhes_prod">
-                            <div class="imagem_main"><img src="" alt=""><img src="../../images/livros/assimacabamin/e-assim-que-acaba.png" alt=""></div>
-                            <div class="info">
-                                <div class="info_cima">
+            <div class="formularios">
+                <div class="detalhes">
+                    <span class="forms_titulos">3 - Confirmar compra</span>
+                    <div class="hr"></div>
+                    <span class="forms_titulos">Detalhes</span>
+                    <div class="detalhes_prod">
+                        <div class="imagem_main"><img src="" alt=""><img
+                                src="../../images/livros/assimacabamin/e-assim-que-acaba.png" alt=""></div>
+                        <div class="info">
+                            <div class="info_cima">
                                 <span class="data_entrega"> Chega 13 de setembro de 2024</span>
                                 <span class="titulo_prod">É Assim que Acaba</span>
                                 <span class="autor_qntd">por Collen Hoover</span>
-                                
-                                <span class="autor_qntd">Qntd. 
+
+                                <span class="autor_qntd">Qntd.
                                     <select id="quantidade">
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -242,119 +251,31 @@
                                         <option value="10">10</option>
                                     </select>
                                 </span>
-                                </div>    
-                                
-                                <div class="valores">
-                                    <div class="frete_preco">
-                                        <span>Itens: R$ 38,90</span>
-                                        <span>Frete: R$ 13,45</span>
-                                    </div>
-                                    <div class="soma_final">R$ 52,35</div>
+                            </div>
+
+                            <div class="valores">
+                                <div class="frete_preco">
+                                    <span>Itens: R$ 38,90</span>
+                                    <span>Frete: R$ 13,45</span>
                                 </div>
+                                <div class="soma_final">R$ 52,35</div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
+            <div>
                 <div>
-                    <div>
-                        <button class="button_default button_confirmar" type="submit"  onclick="validar()">Confirmar</button>
-                        <div popover id="compra_confirmada"> Compra realizada com sucesso!</div>
-                    </div>
+                    <button class="button_default button_confirmar" type="submit" onclick="validar()">Confirmar</button>
+                    <div popover id="compra_confirmada"> Compra realizada com sucesso!</div>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
-    </body>
+    <script src="../../js/validarCompra.js"></script>
 
-    <script>
-        var nome = document.getElementById("nome_id")
-        var endereco = document.getElementById("endereco_id")
-        var numero_residencia = document.getElementById("numero_id")
-        var cep = document.getElementById("postalcode_id")
-        var  cidade = document.getElementById("cidade_id")
-        var bairro = document.getElementById("bairro_id")
-        var cartao = document.getElementById("cartao")
-        var pix = document.getElementById("pix")
-        var boleto = document.getElementById("boleto")
-        var metodo = document.getElementById("metodoValidar")
-
-
-        var msgNome = document.getElementById("msgNome")
-        var msgEndereco = document.getElementById("msgEndereco")
-        var msgNumeroRes = document.getElementById("msgNumeroRes")
-        var msgPostalCode = document.getElementById("msgPostalCode")
-        var msgCidade = document.getElementById("msgCidade")
-        var msgBairro = document.getElementById("msgBairro")
-        var msgMetodo = document.getElementById("msgMetodo")
-
-        var popover = document.getElementById("compra_confirmada")
-
-
-        function validar() {
-
-            if (nome.value == "") {
-                msgNome.style.display = "block";
-                nome.style.outline = "2px solid #FF0000";
-                nome.focus();
-                return false;
-
-            }
-
-            if (endereco.value == "") {
-                msgEndereco.style.display = "block";
-                endereco.style.outline = "2px solid #FF0000";
-                endereco.focus();
-                return false;
-
-            }
-
-            if (numero_residencia.value == "") {
-                msgNumeroRes.style.display = "block";
-                numero_residencia.style.outline = "2px solid #FF0000";
-                numero_residencia.focus();
-                return false;
-            }
-
-            if (cep.value == "") {
-                msgPostalCode.style.display = "block";
-                cep.style.outline = "2px solid #FF0000";
-                cep.focus();
-                return false;
-
-            }
-
-            if (cidade.value == "") {
-                msgCidade.style.display = "block";
-                cidade.style.outline = "2px solid #FF0000";
-                cidade.focus();
-                return false;
-
-            }
-
-            if (bairro.value == "") {
-                msgBairro.style.display = "block";
-                bairro.style.outline = "2px solid #FF0000";
-                bairro.focus();
-                return false;
-
-            }
-
-            if (!cartao.checked && !pix.checked && !boleto.checked){
-                msgMetodo.style.display = "block"
-                metodo.style.outline = "3px solid #FF0000"
-                cartao.focus();
-                return false;
-            }
-
-            popover.showPopover("popover");
-            
-        };
-
-        function limpar(id, msg){
-                id.style.outline = '';
-                msg.style.display = '';
-            }
-    </script>
+</body>
 
 </html>
